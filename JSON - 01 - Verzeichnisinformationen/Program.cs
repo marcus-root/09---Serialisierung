@@ -5,7 +5,7 @@ namespace JSON___01___Verzeichnisinformationen
     {
         static void Main(string[] args)
         {
-            String suchpfad = "C:\\Windows";
+            String suchpfad = "C:\\Windows\\system32";
             String jsonPfad = "D:\\windows.json";
             List<DirInfo> dirs = new List<DirInfo>();
 
@@ -17,11 +17,15 @@ namespace JSON___01___Verzeichnisinformationen
 
             // Speichern der Liste in einer json Datei
             FileStream fs = File.Create(jsonPfad);
+            JsonSerializerOptions opt = new JsonSerializerOptions()
+            {
+                WriteIndented = true
+            };
             StreamWriter sw = new StreamWriter(fs);
             String jsonString;
             foreach (DirInfo d in dirs)
             {
-                jsonString = JsonSerializer.Serialize(d);
+                jsonString = JsonSerializer.Serialize(d, opt);
                 sw.WriteLine(jsonString);
             }
             sw.Close();
@@ -33,11 +37,12 @@ namespace JSON___01___Verzeichnisinformationen
             List<String> jsonLines = new List<string>();
             jsonLines.AddRange(File.ReadLines(jsonPfad));
 
-            List<DirInfo> deSerializedDirs = new List<DirInfo>();
-            foreach (String line in jsonLines)
-            {
-                deSerializedDirs.Add(JsonSerializer.Deserialize<DirInfo>(line));
-            }
+            //List<DirInfo> deSerializedDirs = new List<DirInfo>();
+            List<DirInfo> deSerializedDirs = JsonSerializer.Deserialize<List<DirInfo>>(File.ReadAllText(jsonPfad));
+            //foreach (String line in jsonLines)
+            //{
+            //    deSerializedDirs.Add(JsonSerializer.Deserialize<DirInfo>(line));
+            //}
 
             // Ausgeben der Objekte
             Console.WriteLine("Objekte werden ausgegeben:");
@@ -47,7 +52,7 @@ namespace JSON___01___Verzeichnisinformationen
             }
         }
 
-        // Rekursive Funktiion die durch die Ordner geht
+        // Rekursive Funktion die die Ordnerinformationen abruft
         static void Search(String pfad, List<DirInfo> dirs)
         {
             String[] dateiPfade = null;

@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON - 01 - Verzeichnisinformationen", "JSON - 01 - Verzeichnisinformationen\JSON - 01 - Verzeichnisinformationen.csproj", "{4480F1DC-4ACA-4E6E-8BF2-C1657AD7A24F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON - 02 - Produkte", "JSON - 02 - Produkte\JSON - 02 - Produkte.csproj", "{05686070-88AD-47A1-B710-36894C4CCED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON - 03 - FizzBuzz", "JSON - 03 - FizzBuzz\JSON - 03 - FizzBuzz.csproj", "{52997B7D-1982-4A30-8EC5-0220CA6BCE5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4480F1DC-4ACA-4E6E-8BF2-C1657AD7A24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4480F1DC-4ACA-4E6E-8BF2-C1657AD7A24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4480F1DC-4ACA-4E6E-8BF2-C1657AD7A24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05686070-88AD-47A1-B710-36894C4CCED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05686070-88AD-47A1-B710-36894C4CCED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05686070-88AD-47A1-B710-36894C4CCED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05686070-88AD-47A1-B710-36894C4CCED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52997B7D-1982-4A30-8EC5-0220CA6BCE5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52997B7D-1982-4A30-8EC5-0220CA6BCE5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52997B7D-1982-4A30-8EC5-0220CA6BCE5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52997B7D-1982-4A30-8EC5-0220CA6BCE5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

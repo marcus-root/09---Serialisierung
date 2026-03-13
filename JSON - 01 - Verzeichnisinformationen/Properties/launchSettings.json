@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "JSON - 01 - Verzeichnisinformationen": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
